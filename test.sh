@@ -19,7 +19,7 @@ EOM
 }
 
 function ctrl_c() {
-    echo -e "\nRemoving function"
+    echo -e "\nRemoving function, please wait..."
     rm *.tmp
 	sls remove > /dev/null
 	exit 0
