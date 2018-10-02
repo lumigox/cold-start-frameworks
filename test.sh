@@ -62,7 +62,7 @@ do
 	full_time=${result[0]}
 	cleared_time=$(echo $full_time|awk -F ":" '{print $NF}')
 	echo "Took $cleared_time seconds with exit code of ${result[1]}"
-	echo "$(date '+%FT%T'),$cleared_time,${result[1]}" >> ../"$directory_$2.csv"
+	echo "$(date '+%FT%T'),$cleared_time,${result[1]}" >> ../"${directory}_${2}.csv"
 	counter=$(( $counter + 1 ))
 	# Avoid Code not changed causing function deployment to skip
 	touch "$counter.tmp"
