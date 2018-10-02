@@ -9,6 +9,7 @@ Right now the repository contains templates for five nodejs frameworks:
 2. [Hapi](https://hapijs.com/)
 3. [Koa](https://koajs.com/)
 4. [Lambda API](https://serverless-api.com/)
+5. [Restify](http://restify.com/)
 5. Plain old nodejs
 
 In order test a framework please run `./test.sh <directory> <memory>` when `directory` is the template directory to run and `memory` is memory assigned to the lambda.
