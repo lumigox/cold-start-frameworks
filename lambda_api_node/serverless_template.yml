@@ -10,5 +10,3 @@ functions:
   memory-@MEMORY@:
     handler: index.handler
     memorySize: @MEMORY@
-    events:
-      - http: GET /
