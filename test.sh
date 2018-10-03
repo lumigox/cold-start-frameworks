@@ -1,6 +1,6 @@
 #!/bin/bash
 
-usage() {
+function usage() {
     cat <<EOM
 .____                  .__                  .__        
 |    |    __ __  _____ |__| ____   ____     |__| ____  
@@ -38,6 +38,7 @@ echo "        \/           \/  /_____/         \/            ";
 
 echo "Press [CTRL+C] to stop at any time"
 echo
+
 directory=$(echo $1|tr -d [=/=])
 cd $directory
 echo Preparing template
@@ -53,6 +54,8 @@ function_name=$(sls deploy |grep "function" -A1|tail -1|awk -F ":" '{print $1}'|
 echo "Deployed to $function_name"
 # trap ctrl-c and call ctrl_c()
 trap ctrl_c SIGINT
+
+# Loop forever until users decides to stop
 while true
 do
 	echo "Run #$counter"
