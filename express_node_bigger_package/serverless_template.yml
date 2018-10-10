@@ -1,0 +1,12 @@
+service: nodejs-express-with-bigger-@DATE@
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: dev
+  region: us-east-1
+
+functions:
+  memory-@MEMORY@:
+    handler: index.handler
+    memorySize: @MEMORY@
